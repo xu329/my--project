@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>宠物领养中心</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>🐾 宠物领养中心</h1>
+    </header>
+
+    <main>
+        <!-- 注册表单 -->
+        <section id="register">
+            <h2>用户注册</h2>
+            <form id="registerForm">
+                <label for="username">用户名：</label>
+                <input type="text" id="username" name="username" required>
+                <br/>
+                <label for="password">密码：</label>
+                <input type="password" id="password" name="password" required>
+                <br/>
+                <button type="submit">注册</button>
+            </form>
+        </section>
+
+        <!-- 登录表单 -->
+        <section id="login">
+            <h2>用户登录</h2>
+            <form id="loginForm">
+                <label for="loginUsername">用户名：</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+                <br/>
+                <label for="loginPassword">密码：</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                <br/>
+                <button type="submit">登录</button>
+            </form>
+        </section>
+
+
+
+
+
+        <!-- 宠物展示区 -->
+        <section id="pets">
+            <h2>可领养的宠物</h2>
+            <div class="pet-list" id="petList">
+                <!-- 动态加载 -->
+            </div>
+        </section>
+
+        <!-- 评论区 -->
+        <section id="comments">
+            <h2>用户评论</h2>
+            <div id="commentList">
+                <!-- 动态加载 -->
+            </div>
+
+            <h3>发表评论</h3>
+            <form id="commentForm">
+                <input type="hidden" id="userid" value="1"> <!-- 模拟登录用户 -->
+                <input type="hidden" id="adminsid" value="1"> <!-- 默认管理员回复 -->
+                <label for="petSelect">选择宠物：</label>
+                <select id="petSelect" required></select>
+                <br/>
+                <label for="content">评论内容：</label>
+                <textarea id="content" required></textarea>
+                <br/>
+                <button type="submit">提交评论</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
